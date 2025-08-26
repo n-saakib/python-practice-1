@@ -1,7 +1,7 @@
 def safe_div(a: float, b: float) -> float:
     if b == 0:
         return None
-    return a / b
+    return round(a / b, 3)
 
 
 def slugify(s: str) -> str:
@@ -37,5 +37,5 @@ def median(nums: list[float]) -> float:
     if l % 2 == 1:
         return nums[l // 2]
     else:
-        sum = nums[l / 2] + nums[(l / 2) + 1]
+        sum = nums[l // 2] + nums[(l // 2) - 1]
         return sum / 2.0
